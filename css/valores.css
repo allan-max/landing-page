@@ -4,140 +4,141 @@
     --primary: #007bff;
     --card-bg: #fff;
     --button-color: #fff;
-    --footer-bg: #333;
-    --footer-text: #fff;
-}
-
-body.dark {
+    --border: #ccc;
+  }
+  
+  body.dark {
     --bg: #121212;
     --text: #e0e0e0;
     --primary: #4dabf7;
     --card-bg: #1f1f1f;
     --button-color: #fff;
-    --footer-bg: #333;
-    --footer-text: #fff;
-}
-
-body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Segoe UI', sans-serif;
+    --border: #444;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.container {
+    padding: 20px 0;
+  }
+  
+  .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-}
-
-.navbar {
+  }
+  
+  .navbar {
     background-color: var(--card-bg);
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.nav-container {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.logo {
+    flex-wrap: wrap;
+  }
+  
+  .logo {
     font-size: 24px;
     color: var(--primary);
-}
-
-.nav-links {
-    list-style: none;
+  }
+  
+  .nav-links {
     display: flex;
+    list-style: none;
+    align-items: center;
     gap: 20px;
-}
-
-.nav-links a {
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
     text-decoration: none;
     color: var(--text);
     transition: color 0.2s;
-}
-
-.nav-links a:hover {
+  }
+  
+  .nav-links a:hover {
     color: var(--primary);
-}
-
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.btn {
+  }
+  
+  .btn-theme {
     background-color: var(--primary);
-    color: var(--button-color);
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-.sobre {
-    padding: 40px 20px;
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    margin-top: 30px;
-}
-
-footer {
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.btn-theme {
-    background: var(--primary);
     color: var(--button-color);
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-theme:hover {
-    background-color: #0056b3;
-}
-
-.pricing {
-    padding: 40px 20px;
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    margin-top: 30px;
+  }
+  
+  .pricing h1 {
     text-align: center;
-}
-
-.price-card {
-    background-color: var(--bg);
-    border-radius: 8px;
+    margin-bottom: 20px;
+    color: var(--primary);
+  }
+  
+  .pricing p {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .price-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.price-card h2 {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .price-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .price-card h2 {
     color: var(--primary);
-    font-size: 1.8em;
     margin-bottom: 10px;
-}
-
-.price-card p {
+  }
+  
+  .price-card p {
     margin-bottom: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background-color: var(--card-bg);
     color: var(--text);
-}
+    margin-top: 30px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .price-card {
+      padding: 15px;
+    }
+  }
+  
