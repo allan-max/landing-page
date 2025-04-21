@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Allan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+    <nav class="navbar">
+        <div class="container nav-container">
+            <img src="img/IMG_20250303_180418_764.webp" alt="Foto de perfil de Allan" width="90px">
+            <h2 class="logo">ALLAN</h2>
+            <ul class="nav-links">
+                <li><a href="./paginas/sobre.html">Sobre</a></li>
+                <li><a href="./paginas/contato.html">Contato</a></li>
+                <li><a href="./paginas/tabela.html">Histórico Escolar</a></li>
+                <li><a href="./paginas/valores.html">valores</a></li>
+                <li><a href="./paginas/chat.html">chat</a></li>
+            </ul>
+            <button id="toggle-theme" class="btn-theme">🌙</button>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero">
+            <video autoplay muted loop playsinline class="bg-video">
+              <source src="videoplayback.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos em HTML5.
+            </video>
+          
+            <div class="hero-content container">
+              <h1>Bem-vindo à landing page do Allan</h1>
+              <p>Meu trabalho de faculdade</p>
+              <a href="#sobre" class="btn">Veja mais</a>
+            </div>
+          </header>
+
+        <section id="sobre" class="sobre">
+            <div class="container">
+                <h2>Resumo</h2>
+                <p>Estudante de Ciência da Computação de 19 anos, atualmente atuando como desenvolvedor front-end e em transição para o back-end, além disso, Jogo basquete e sou corintiano.</p>
+                <a href="./paginas/curriculo.html" target="_blank">minhas competências</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="music-player">
+        <audio id="audio" src="Wicked Game.mp3" loop></audio>
+        <div class="controls">
+          <button id="playPause">▶️</button>
+          <button id="volumeDown">🔉</button>
+          <button id="volumeUp">🔊</button>
+        </div>
+      </div>
+      
+      <script src="theme.js"></script>
+      <script src="music-player.js"></script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Allan. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
+</html>
