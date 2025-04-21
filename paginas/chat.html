@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - Allan</title>
+  <link rel="stylesheet" href="../css/chat.css" />
+</head>
+<body class="light">
+
+  <div class="tema-container">
+    <button id="toggle-theme" class="btn-theme">🌙</button>
+  </div>
+
+  <div class="container">
+    <h1>Entre em Contato</h1>
+    <form action="#" method="post">
+      
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label>Você é:</label>
+      <div class="radio-group">
+        <input type="radio" id="fisica" name="tipoPessoa" value="fisica" checked />
+        <label for="fisica">Pessoa Física</label>
+        <input type="radio" id="juridica" name="tipoPessoa" value="juridica" />
+        <label for="juridica">Pessoa Jurídica</label>
+      </div>
+
+      <label for="horario">Melhor horário para contato:</label>
+      <select id="horario" name="horario">
+        <option value="manha">Manhã</option>
+        <option value="tarde">Tarde</option>
+        <option value="noite">Noite</option>
+      </select>
+
+      <label for="servico">Tipo de serviço desejado:</label>
+      <select id="servico" name="servico">
+        <option value="site-institucional">Site Institucional</option>
+        <option value="loja-virtual">Loja Virtual</option>
+        <option value="blog">Blog Pessoal</option>
+        <option value="portfolio">Portfólio</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="descricao">Descrição do projeto:</label>
+      <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva aqui o que deseja contratar..."></textarea>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="termos" required />
+        <label for="termos">Concordo com os termos de uso e política de privacidade.</label>
+      </div>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+<br>
+<br>
+    <a href="../index.html" class="btn voltar">Voltar</a>
+  </div>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

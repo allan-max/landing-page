@@ -1,0 +1,74 @@
+:root {
+    --bg: #f4f4f4;
+    --text: #222;
+    --primary: #007bff;
+    --table-header: #f2f2f2;
+    --table-border: #333;
+    --button-bg: #007bff;
+    --button-text: #fff;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --table-header: #1f1f1f;
+    --table-border: #555;
+    --button-bg: #4dabf7;
+    --button-text: #fff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+th, td {
+    border: 1px solid var(--table-border);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--table-header);
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.btn-theme {
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 18px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
